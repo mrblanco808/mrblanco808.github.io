@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="author" content="Matthew Blanco">
+<script src="https://d3js.org/d3.v5.min.js"></script>
+</head> 
+<body>
+
+<!-- [1] :) -->
+<script type="text/javascript">
+    d3.select("body").style("background-color","#808080");
+</script>
+<svg width="250" height="200">
+    <g transform = "translate (150,0)">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="1" fill="yellow" />
+    <ellipse cx="35" cy="40"rx="5" ry="10" stroke="black" stroke-width="1" fill="black" />
+    <ellipse cx="65"cy="40" rx="5" ry="10" stroke="black" stroke-width="1" fill="black" />
+    <path d="M 35 65 Q 50 80 65 65" stroke="black" stroke-width="1" fill="none" />
+    </g>
+</svg>
+
+<!-- [3] 2 -->
+<svg width="200" height="200"></svg>
+<div>&nbsp;</div>
+<button onclick="triggerTransition()">Transition</button>
+<script type="text/javascript">
+    var circleData = [
+                    [10,"#dbf6f3",10],
+                    [30,"#5dade2",20],
+                    [60,"#2874a6",25],
+                    [100,"#154360",30]	
+                    ];
+
+    var circles = d3.select("svg")
+		.selectAll("circle")
+		.data(circleData);
+    
+    circles.enter()
+        .append("circle")
+        .attr("cx", function (d) {
+            return d[0];
+        })
+        .attr("cy", function (d) {
+            return d[0];
+        })
+        .attr("r", function (d) {
+            return d[2];
+        })			    
+        .style("fill", function(d){return d[1]});
+
+    function triggerTransition() {
+        d3.select("svg").selectAll("circle").transition().duration(2000).style("fill","yellow");
+    }  
+</script>
+
+</body>
+</html>
