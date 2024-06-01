@@ -12,7 +12,7 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 18px;
         margin: 4px 2px;
         cursor: pointer;
     }
@@ -29,18 +29,26 @@
 </style>
 </head> 
 <body>
-    <button class="button b1" onclick="myFunction1()">Electronics</button>
-    <button class="button b2" onclick="myFunction2()">Glass</button>
-    <button class="button b3" onclick="myFunction3()">HHW</button>
-    <button class="button b4" onclick="myFunction4()">Inerts</button>
-    <button class="button b5" onclick="myFunction5()">Metal</button>
-    <button class="button b6" onclick="myFunction6()">Miscellaneous</button>
-    <button class="button b7" onclick="myFunction7()">Organics</button>
-    <button class="button b8" onclick="myFunction8()">Paper</button>
-    <button class="button b9" onclick="myFunction9()">Plastic</button>
-    <button class="button b10" onclick="myFunction10()">Special</button>
-    <br />
+    
     <table style="width:100%">
+        <tr>
+            <td style="text-align: center; vertical-align: center;">
+                <h2>Predicting 2024 California Waste Characterization (in Tons)</br>from Historical Data (2014, 2018 & 2021)</h2>
+            </td>
+            <td style="text-align: center; vertical-align: center;">
+                <button class="button b1" onclick="myFunction1()">Electronics</button>
+                <button class="button b2" onclick="myFunction2()">Glass</button>
+                <button class="button b3" onclick="myFunction3()">HHW</button>
+                <button class="button b4" onclick="myFunction4()">Inerts</button>
+                <button class="button b5" onclick="myFunction5()">Metal</button>
+                <br />
+                <button class="button b6" onclick="myFunction6()">Miscellaneous</button>
+                <button class="button b7" onclick="myFunction7()">Organics</button>
+                <button class="button b8" onclick="myFunction8()">Paper</button>
+                <button class="button b9" onclick="myFunction9()">Plastic</button>
+                <button class="button b10" onclick="myFunction10()">Special</button>
+            </td>
+        </tr>
         <tr>
             <td style="width:50%; vertical-align: top;">
                 <iframe id="all" width="100%" height="900" frameborder="0" src="https://observablehq.com/embed/4a86b127eea6db01?cells=viewof+index%2Cchart&banner=false"></iframe>
